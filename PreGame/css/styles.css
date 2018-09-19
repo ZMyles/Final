@@ -13,10 +13,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 40px;
 }
 
 h1 {
+  background: coral;
   display: inline;
   font-size: 10em;
   color: white;
@@ -36,7 +37,7 @@ h1 {
   }
 }
 
-/* -------*/
+/* ---------------------------*/
 nav {
   margin-top: 100px;
 }
@@ -154,6 +155,8 @@ p{
 }
 
 .submitBtn {
+  color: white;
+  background-color: red;
   font-size: 60px;
   font-family: 'Lobster', cursive;
   margin: 20px;
@@ -163,6 +166,7 @@ p{
   width: 900px;
   margin-left: 200px;
   border-radius: 10px;
+  border-style: none;
 }
 
 .submitBtn:hover {
@@ -178,6 +182,9 @@ input {
 
 /*-----------------------------*/
 .buttonTrue {
+  background-color: lightblue;
+  color: white;
+  border-style: none;
   font-size: 60px;
   font-family: 'Lobster', cursive;
   margin: 20px;
@@ -199,6 +206,9 @@ input {
 }
 
 .buttonFalse {
+  color: white;
+  background-color: lightblue;
+  border-style: none;
   font-size: 60px;
   font-family: 'Lobster', cursive;
   margin: 20px;
@@ -226,7 +236,7 @@ input {
   position: relative;
   background-size: auto;
   background-repeat: auto;
-  background-image: url(/PreApp/js/css/images/broken-bottle-pattern.jpg);
+  background-image: url(../images/broken-bottle-pattern.jpg);
     background-size: 235px auto;
     opacity: 0.9;
     animation: move 3.5s linear infinite;
@@ -244,7 +254,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 250px;
+  font-size: 150px;
 }
 /* ---------------------------*/
 
@@ -264,16 +274,28 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 
 .wrapper {
-  position: absolute;
-  left: 580px;
-  bottom: 300px;
+  display: flex;
+  justify-content: center;
+ 
+  background-color: red;
 }
 
+img {
+  width: 100%;
+  height: 500px;;
+  border-radius: 5px;
+}
 
+.container {
+  padding-top: 200px;
+}
+
+.tryAgain {
+  margin-top: 440px;
+}
 
 

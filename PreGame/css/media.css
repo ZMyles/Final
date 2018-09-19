@@ -1,0 +1,34 @@
+
+/*table Screen size*/
+@media only screen and (max-width: 900px) {
+  h1 {
+    background: coral;
+    
+  }
+
+  .submitBtn {
+    width: 600px;
+    margin-left: 20px;
+  }
+  
+  a{
+    margin: 0 auto;
+  }
+
+  .winner, .lose {
+    font-size: 150px;
+  }
+
+  img {
+    margin-left: 100px;
+    width: 70%;
+    height: 450px;;
+    border-radius: 5px;
+}
+  }
+
+  
+
+
+
+}

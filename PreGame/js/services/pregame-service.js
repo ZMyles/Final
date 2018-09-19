@@ -33,7 +33,7 @@ function Quiz($http, $location){
     //---------------------------Array of Drinks
     vm.dranks=[ 
         {   
-            
+            image: "images/whiskey-smash.jpg",
             name:"Whiskey Smash",
             ingredient:[
                 "half lemon cut into wedges",
@@ -45,6 +45,7 @@ function Quiz($http, $location){
         },
     
         { 
+            image: "images/makers-mark-collins.jpg",
             name:"Marker's Mark Collins",
             ingredient:["2oz Maker's Mark Bourbon",
                 "1oz Lemon juice",
@@ -55,7 +56,9 @@ function Quiz($http, $location){
             ]
         },
     
-        {   name:"New York Sour",
+        {   
+            image: "images/new-york-sour.jpg",
+            name:"New York Sour",
             ingredient:["2 oz Rye whiskey or bourbon",
                 "1oz Lemon juice",
                 "3⁄4 oz",
@@ -66,7 +69,8 @@ function Quiz($http, $location){
     
         },
     
-        {   name:"Tequila Mockingbird cocktail",
+        {   image: "images/tequila-mockingbird.jpg",
+             name:"Tequila Mockingbird cocktail",
             ingredient:["1 Jalapeño pepper slice",
                 "3 Watermelon cubes (about ⅓ cup)",
                 "2 oz Silver tequila",
@@ -78,7 +82,7 @@ function Quiz($http, $location){
     
         },
     
-        {
+        {   image: "images/lagerita.jpg",
             name:"Lagerita",
             ingredient:["Salt (optional)",
                 "2 oz Cabeza Tequila",
@@ -90,7 +94,7 @@ function Quiz($http, $location){
     
             ]
         },
-        {
+        {   image: "images/last-word.jpg",
             name:"The Last Word",
             ingredient:["4 oz Gin",
                 "3⁄4 oz Maraschino liqueur",
@@ -99,7 +103,8 @@ function Quiz($http, $location){
                 "Glass: Coupe"
         ]
         },
-        {   name:"The Aviation",
+        {   image: "images/aviation.jpg",
+             name:"The Aviation",
             ingredient:["2 oz Gin",
                 "1⁄2 oz Maraschino liqueur",
                 "1⁄4 oz Crème de Violette",
@@ -109,7 +114,7 @@ function Quiz($http, $location){
         ]
     
         },
-        {
+        {   image: "images/hanky-panky.jpg",
             name:"The Hanky Panky",
             ingredient:["1 1⁄2oz Gin",
                 "1 1⁄2 oz Sweet vermouth",
@@ -118,7 +123,8 @@ function Quiz($http, $location){
                 "Glass: Cocktail"
         ]
         },
-        {
+        {   
+            image: "images/cape-codder.jpg",
             name:"The Cap Codder",
             ingredient:["1 1⁄2 oz Vodka",
                 "Cranberry juice",
@@ -128,7 +134,8 @@ function Quiz($http, $location){
     
         },
     
-        {
+        {   
+            image: "images/cucumber-fizz.jpg",
             name:"The Cucumber Fizz",
             ingredient:["2 oz Cucumber, peeled and roughly chopped",
                 "1 1⁄2 oz Grey Goose La Poire flavored vodka",
@@ -142,6 +149,7 @@ function Quiz($http, $location){
         },
     
         {   
+            image: "images/harvey-wallbanger.jpg",
             name:"The Harvey WallBanger",
             ingredient:["1 1⁄4 oz Vodka",
                 "3 oz Orange juice",

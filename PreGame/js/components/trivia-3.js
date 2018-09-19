@@ -7,9 +7,8 @@ const triviaThree = {
     
         <div class="bodyBlock">
         <form>
-            <button type="button" class="buttonTrue" ng-value="true" ng-click="$ctrl.answer(this.value, $ctrl.trivia[2].correct_answer);">True</button>
-
-            <button type="button" class="buttonFalse" ng-value="false" ng-click="$ctrl.answer(this.value, $ctrl.trivia[2].correct_answer);">False</button>
+            <input class="buttonTrue" type="button" ng-click="$ctrl.answer('true', $ctrl.trivia[2].correct_answer)" value="true">
+            <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[2].correct_answer)" value="false">
         </form>
         </div>
     </div>

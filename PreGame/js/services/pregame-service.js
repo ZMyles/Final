@@ -11,7 +11,6 @@ function Quiz($http, $location){
             `https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=boolean`
         }).then((response) => {
             vm.results = response.data.results;
-            console.log(vm.results);
             for(let i =0; i<vm.results.length; i++){
                vm.finResults.push({ question:
                    vm.results[i].question.replace(/&#039;/gi, "' ").replace(/&quot;/gi,'"'),

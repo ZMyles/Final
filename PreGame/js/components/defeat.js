@@ -7,10 +7,10 @@ const defeat = {
   </div>
 
   <div class="wrapper">
- 
       <li><a href="#!/home">Try Again?</a></li>
+       <p>{{$ctrl.stats}}</p>
    </div>
-   <p>{{$ctrl.stats}}</p>
+     
   `,
   controller:["Quiz", "$location" ,function(Quiz,$location){
     const vm=this;

@@ -6,10 +6,10 @@ const triviaThree = {
         <p class="questions">{{ $ctrl.trivia[2].question }}</p>
     
         <div class="bodyBlock">
-        <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[2].correct_answer);">
-            <input class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
-            <input class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
-            <button class="submitBtn">Submit</button>
+        <form>
+            <button type="button" class="buttonTrue" ng-value="true" ng-click="$ctrl.answer(this.value, $ctrl.trivia[2].correct_answer);">True</button>
+
+            <button type="button" class="buttonFalse" ng-value="false" ng-click="$ctrl.answer(this.value, $ctrl.trivia[2].correct_answer);">False</button>
         </form>
         </div>
     </div>

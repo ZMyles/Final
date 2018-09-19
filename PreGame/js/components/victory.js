@@ -3,6 +3,7 @@
 const victory = {
   template: `
   <div class="movingBackground">
+
    <h1 class="winner">You Win!</h1>
 
 
@@ -12,6 +13,7 @@ const victory = {
                 <div class="flipper">
                     <div class="front">
               <p><p>{{$ctrl.randomDranks.name}}<p></p>
+                <img ng-src="{{$ctrl.randomDranks.image}}"/>
               
                     </div>
                   <div class="back"> 
@@ -30,9 +32,9 @@ const victory = {
    </div>
 </div>
 
-    
- 
+   
 
+ 
   
   `,
   controller:["Quiz", "$location" ,function(Quiz,$location){

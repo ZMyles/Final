@@ -3,7 +3,7 @@
 const homePage = {
   template: `
   <div class="movingBackground">
-        <div class="move">
+        <div class="move container">
         <div class="box"><h1>Pre-Game</h3></div>
 
         <div class="instructions">

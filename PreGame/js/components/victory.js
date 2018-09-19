@@ -26,9 +26,10 @@ const victory = {
 </div>
     
 <li><a href="#!/trivia">Try Again?</a></li>
+   <p>{{$ctrl.stats}}</p>
    </div>
 </div>
-<p>{{$ctrl.stats}}</p>
+
     
  
 

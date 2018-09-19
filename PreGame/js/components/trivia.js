@@ -7,12 +7,9 @@ const trivia = {
         </div>
     
         <div class="bodyBlock">
-        <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[0].correct_answer);">
-            <input class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
-            <input class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
-            
-            <button class="submitBtn">Submit</button>
-        </div>
+        <form>
+            <input class="buttonTrue" type="button" ng-click="$ctrl.answer('true', $ctrl.trivia[0].correct_answer)" value="true">
+            <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[0].correct_answer)" value="false">
         </form>
     
         

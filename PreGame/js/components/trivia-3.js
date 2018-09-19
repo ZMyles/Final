@@ -18,7 +18,7 @@ const triviaThree = {
         const vm=this;
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
-                vm.trivia = Quiz.results;
+                vm.trivia = response;
                 console.log(vm.trivia)
             });
         };
@@ -34,6 +34,7 @@ const triviaThree = {
                 console.log("Trivia 3 You're wrong. you suck");
                 Quiz.lose();
             }
+            Quiz.checkStats();
             $location.path("/trivia-four");
         };        
     }]

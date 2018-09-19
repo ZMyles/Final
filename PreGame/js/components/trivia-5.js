@@ -7,7 +7,7 @@ const triviaFive = {
 
   <div class="bodyBlock">
   <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[4].correct_answer);">
-      <input class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
+      <button class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer"></button>
       <input class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
       <button class="submitBtn">Submit</button>
   </form>
@@ -19,7 +19,7 @@ const triviaFive = {
         const vm=this;
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
-                vm.trivia = Quiz.results;
+                vm.trivia = response
                 console.log(vm.trivia)
             });
         };

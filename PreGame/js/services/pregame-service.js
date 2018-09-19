@@ -3,6 +3,7 @@ function Quiz($http, $location){
     const vm= this;
     vm.wins = 0;
     vm.losses = 0;
+    vm.finResults=[];
     vm.triviaSearch =() =>{
         return $http({
             method:"GET",
@@ -10,8 +11,20 @@ function Quiz($http, $location){
             `https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=boolean`
         }).then((response) => {
             vm.results = response.data.results;
-            return vm.results;
-        });    
+            console.log(vm.results);
+            for(let i =0; i<vm.results.length; i++){
+               vm.finResults.push({ question:
+                   vm.results[i].question.replace(/&#039;/gi, "' ").replace(/&quot;/gi,'"'),
+                   type:vm.results[i].type,
+                   correct_answer:vm.results[i].correct_answer});
+
+            };
+
+        
+            return vm.finResults;
+        });   
+       
+        
     };
     
     //-------------------------------Methods For Questions
@@ -29,7 +42,13 @@ function Quiz($http, $location){
             $location.path("/defeat");
         }
     };
-
+    vm.getStats = () => {
+        
+        return {
+            losses: vm.losses,
+            wins: vm.wins
+        }
+    };
     //---------------------------Array of Drinks
     vm.dranks=[ 
         {   

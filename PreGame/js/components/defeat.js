@@ -10,7 +10,14 @@ const defeat = {
  
       <li><a href="#!/home">Try Again?</a></li>
    </div>
-  `
+   <p>{{$ctrl.stats}}</p>
+  `,
+  controller:["Quiz", "$location" ,function(Quiz,$location){
+    const vm=this;
+    vm.stats = Quiz.getStats();
+    console.log(vm.stats);
+   }
+]
 }
 
 angular.module("pregame")

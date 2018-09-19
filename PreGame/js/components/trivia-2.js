@@ -3,7 +3,7 @@
 const triviaTwo = {
     template:`
     <div class="movingBackground">
-        <p class="questions">{{ $ctrl.trivia[1].question }}</p>
+        <p class="questions">{{ $ctrl.trivia[1].question}}</p>
     
         <div class="bodyBlock">
         <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[1].correct_answer);">
@@ -18,7 +18,7 @@ const triviaTwo = {
         const vm=this;
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
-                vm.trivia = Quiz.results;
+                vm.trivia = response;
                 console.log(vm.trivia)
             });
         };
@@ -34,6 +34,7 @@ const triviaTwo = {
                 console.log("Trivia 2 You're wrong. you suck");
                 Quiz.lose();
             }
+            Quiz.checkStats();
             $location.path("/trivia-three");
         };        
     }]

@@ -28,7 +28,8 @@ const victory = {
 <li><a href="#!/trivia">Try Again?</a></li>
    </div>
 </div>
-           
+<p>{{$ctrl.stats}}</p>
+    
  
 
   
@@ -36,7 +37,10 @@ const victory = {
   controller:["Quiz", "$location" ,function(Quiz,$location){
     const vm=this;
     vm.dranks = Quiz.getDranks();
-
+    
+    vm.stats = Quiz.getStats();
+    console.log(vm.stats);
+    
     vm.randomDranks = Quiz.dranks[Math.floor(Math.random()*vm.dranks.length)    ];
 
       }

@@ -182,7 +182,7 @@ input {
 
 /*-----------------------------*/
 .buttonTrue {
-  background-color: lightblue;
+  
   color: white;
   border-style: none;
   font-size: 60px;
@@ -207,7 +207,7 @@ input {
 
 .buttonFalse {
   color: white;
-  background-color: lightblue;
+ 
   border-style: none;
   font-size: 60px;
   font-family: 'Lobster', cursive;
@@ -241,6 +241,7 @@ input {
     opacity: 0.9;
     animation: move 3.5s linear infinite;
 }
+
 
 
 .lose {

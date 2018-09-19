@@ -8,8 +8,9 @@ const trivia = {
     
         <div class="bodyBlock">
         <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[0].correct_answer);">
-            <input ng-click="$ctrl.toggle(click);" class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
-            <input ng-click="$ctrl.toggle(click);" class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
+            <input ng-class="{ 'isOn': $ctrl.isOn}" ng-click="$ctrl.toggle();" class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
+
+            <input ng-click="$ctrl.toggle();" class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
             
             <button class="submitBtn">Submit</button>
         </div>
@@ -21,6 +22,8 @@ const trivia = {
     //Injected Our "Quiz" services and "$location" to use their properties 
     controller:["Quiz", "$location" ,function(Quiz,$location){
         const vm=this;
+        vm.isOn = true;
+
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
                 vm.trivia = Quiz.results;
@@ -42,12 +45,13 @@ const trivia = {
             $location.path("/trivia-two");
 
 
-        vm.toggle=(click) => {
-            if(click ===  true) {
-                console.log("Is On");
+        vm.toggle=() => {
+            if(vm.isOn) {
+                vm.isOn = false;
             } else {
-                console.log("is of");
+                vm.isOn = true;
             }
+            console.log(vm.isOn); 
         }
         };     
     }]

@@ -1,0 +1,51 @@
+
+.flip-container {
+  perspective: 1000px;
+  background: coral;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 620px;
+  height: 100%;
+}
+
+/*flip speed*/
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane*/
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*front pane, place back */
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+/* --------------------------- */
+
+.ingreed {
+  font-size:  40px;
+  text-align: center;
+  line-height: 70px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  color: white;
+}

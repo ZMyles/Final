@@ -25,10 +25,11 @@ const trivia = {
    
     `,
     //Injected Our "Quiz" services and "$location" to use their properties 
+    //manages flow
     controller:["Quiz", "$location" ,function(Quiz,$location){
         const vm=this;
         vm.isOn = true;
-
+//
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
                 vm.trivia = response;

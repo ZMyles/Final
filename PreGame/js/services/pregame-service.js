@@ -1,4 +1,5 @@
 "use strict";
+//is the module for our functions
 function Quiz($http, $location){
     const vm= this;
     vm.wins = 0;

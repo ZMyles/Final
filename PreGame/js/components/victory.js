@@ -19,14 +19,9 @@ const victory = {
    <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
                 <div class="flipper">
                     <div class="front">
-<<<<<<< HEAD
               <p>{{$ctrl.randomDranks.name}}<p>
               <img src="{{$ctrl.randomDranks.image}}">
 
-=======
-              <p><p>{{$ctrl.randomDranks.name}}<p></p>
-                <img ng-src="{{$ctrl.randomDranks.image}}"/>
->>>>>>> 059b6c3cdbaefdb37c328ffc4ac53926f4884001
               
                     </div>
                   <div class="back"> 

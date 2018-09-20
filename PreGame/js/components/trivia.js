@@ -7,12 +7,11 @@ const trivia = {
         </div>
     
         <div class="bodyBlock">
-        <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[0].correct_answer);">
-            <input class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
-            <input class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
-            
-            <button class="submitBtn">Submit</button>
-        </div>
+
+        <form>
+            <input class="buttonTrue" type="button" ng-click="$ctrl.answer('true', $ctrl.trivia[0].correct_answer)" value="true">
+            <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[0].correct_answer)" value="false">
+
         </form>
     
         
@@ -21,9 +20,11 @@ const trivia = {
     //Injected Our "Quiz" services and "$location" to use their properties 
     controller:["Quiz", "$location" ,function(Quiz,$location){
         const vm=this;
+        vm.isOn = true;
+
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
-                vm.trivia = Quiz.results;
+                vm.trivia = response;
                 console.log(vm.trivia)
             });
         };
@@ -39,7 +40,18 @@ const trivia = {
                 console.log("Trivia 1 You're wrong. you suck");
                 Quiz.lose();
             }
+            Quiz.checkStats();
             $location.path("/trivia-two");
+
+
+        vm.toggle=() => {
+            if(vm.isOn) {
+                vm.isOn = false;
+            } else {
+                vm.isOn = true;
+            }
+            console.log(vm.isOn); 
+        }
         };     
     }]
 };

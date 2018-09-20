@@ -3,6 +3,7 @@
 const victory = {
   template: `
   <div class="movingBackground">
+
    <h1 class="winner">You Win!</h1>
 
 
@@ -12,6 +13,7 @@ const victory = {
                 <div class="flipper">
                     <div class="front">
               <p><p>{{$ctrl.randomDranks.name}}<p></p>
+                <img ng-src="{{$ctrl.randomDranks.image}}"/>
               
                     </div>
                   <div class="back"> 
@@ -26,17 +28,22 @@ const victory = {
 </div>
     
 <li><a href="#!/trivia">Try Again?</a></li>
+   <p>{{$ctrl.stats}}</p>
    </div>
 </div>
-           
- 
 
+   
+
+ 
   
   `,
   controller:["Quiz", "$location" ,function(Quiz,$location){
     const vm=this;
     vm.dranks = Quiz.getDranks();
-
+    
+    vm.stats = Quiz.getStats();
+    console.log(vm.stats);
+    
     vm.randomDranks = Quiz.dranks[Math.floor(Math.random()*vm.dranks.length)    ];
 
       }

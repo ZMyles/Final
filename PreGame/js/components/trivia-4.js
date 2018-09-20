@@ -6,11 +6,10 @@ const triviaFour = {
   <p class="questions">{{ $ctrl.trivia[3].question }}</p>
 
   <div class="bodyBlock">
-  <form ng-submit="$ctrl.answer(userAnswer,$ctrl.trivia[3].correct_answer);">
-      <input class="buttonTrue" type="button" ng-value="true" name="{{$index}}" ng-model="userAnswer">
-      <input class="buttonFalse" type="button" ng-value="false" name="{{$index}}" ng-model="userAnswer">
-      <button class="submitBtn">Submit</button>
-  </form>
+  <form>
+            <input class="buttonTrue" type="button" ng-click="$ctrl.answer('true', $ctrl.trivia[3].correct_answer)" value="true">
+            <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[3].correct_answer)" value="false">
+        </form>
   </div>
 </div>
      `,
@@ -19,7 +18,7 @@ const triviaFour = {
       const vm=this;
       vm.questions=()=>{
           Quiz.triviaSearch().then((response)=>{
-              vm.trivia = Quiz.results;
+              vm.trivia = response;
               console.log(vm.trivia)
           });
       };
@@ -35,6 +34,7 @@ const triviaFour = {
               console.log("Trivia 4 You're wrong. you suck");
               Quiz.lose();
           }
+          Quiz.checkStats();
           $location.path("/trivia-five");
       };        
   }]

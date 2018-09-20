@@ -273,7 +273,9 @@ input {
   left: 580px;
   bottom: 300px;
 }
-
+form{
+  margin-left: 120px;
+}
 
 
 

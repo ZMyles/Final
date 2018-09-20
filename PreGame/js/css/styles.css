@@ -118,7 +118,7 @@ nav li:hover::after {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url("/PreApp/js/css/images/bottles.jpg");
+  background: url("/js/css/images/bottles.jpg");
     background-size: 235px auto;
     opacity: 0.9;
     animation: move 3.5s linear infinite;
@@ -226,7 +226,7 @@ input {
   position: relative;
   background-size: auto;
   background-repeat: auto;
-  background-image: url(/PreApp/js/css/images/broken-bottle-pattern.jpg);
+  background-image: url(/js/css/images/broken-bottle-pattern.jpg);
     background-size: 235px auto;
     opacity: 0.9;
     animation: move 3.5s linear infinite;

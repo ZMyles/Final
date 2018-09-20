@@ -11,6 +11,7 @@ function Quiz($http, $location){
             url:
             `https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=boolean`
         }).then((response) => {
+            // holds and drill
             vm.results = response.data.results;
             for(let i =0; i<vm.results.length; i++){
                vm.finResults.push({ question:

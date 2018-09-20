@@ -1,0 +1,49 @@
+/*table Screen size*/
+@media only screen and (max-width: 900px) {
+  h1 {
+    background-color: none;
+    font-size: 100px;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 45px;
+  }
+  
+  .questions {
+    font-size: 45px;
+  }
+
+  .bodyBlock{
+    padding: 20px;
+  }
+
+  .buttonTrue, .buttonFalse {
+    height: 10px;
+    width: 520px;
+    padding: 100px;
+  }
+
+  a{
+    margin: 0 auto;
+  }
+
+  .winner , .lose {
+    font-size: 100px;
+  }
+
+  img {
+    margin-left: 100px;
+    width: 70%;
+    height: 450px;;
+    border-radius: 5px;
+}
+/* ------------------------ */
+  img {
+    margin: 0 auto;
+  }
+
+  }

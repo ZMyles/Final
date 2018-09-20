@@ -5,13 +5,21 @@ const victory = {
   <div class="movingBackground">
    <h1 class="winner">You Win!</h1>
 
+   <nav
+   <ul>
+       <li class="tryAgain"><a href="#!/home">Try again?</a></li>
+   </ul>
+</nav>
 
-  //  <div class="move">
+  <div class="move adjust">
 
+  <p class="stats">{{$ctrl.stats}}</p>
    <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
                 <div class="flipper">
                     <div class="front">
-              <p><p>{{$ctrl.randomDranks.name}}<p></p>
+              <p>{{$ctrl.randomDranks.name}}<p>
+              <img src="{{$ctrl.randomDranks.image}}">
+
               
                     </div>
                   <div class="back"> 
@@ -25,8 +33,8 @@ const victory = {
    </div>
 </div>
     
-<li><a href="#!/trivia">Try Again?</a></li>
-   <p>{{$ctrl.stats}}</p>
+
+   
    </div>
 </div>
 

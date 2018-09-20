@@ -7,7 +7,7 @@ const homePage = {
         <div class="box"><h1>Pre-Game</h3></div>
 
         <div class="instructions">
-        <p >Instructions</p>
+        <p>Instructions</p>
            <li>-User must get all 5 questions correct in order to Win Pregame</li>
            <li>-If user answers incorrectly you lose!</li>
 

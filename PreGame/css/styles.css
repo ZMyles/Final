@@ -13,10 +13,16 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
+.adjust {
+  padding-top: 20px;
+}
+
+
 h1 {
+  background: coral;
   display: inline;
   font-size: 10em;
   color: white;
@@ -38,7 +44,7 @@ h1 {
 
 /* -------*/
 nav {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 li {
@@ -153,23 +159,7 @@ p{
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
-.submitBtn {
-  font-size: 60px;
-  font-family: 'Lobster', cursive;
-  margin: 20px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  width: 900px;
-  margin-left: 200px;
-  border-radius: 10px;
-}
 
-.submitBtn:hover {
-  box-shadow: 0px 15px 20px black;
-  color: gray;
-  transform: translateY(-7px);
-}
 
 input {
   padding: 100px;
@@ -222,11 +212,11 @@ input {
 
 .defeatPage {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-size: auto;
   background-repeat: auto;
-  background-image: url(/images/broken-bottle-pattern.jpg);
+  background-image: url(../images/broken-bottle-pattern.jpg);
     background-size: 235px auto;
     opacity: 0.9;
     animation: move 3.5s linear infinite;
@@ -234,17 +224,19 @@ input {
 
 
 .lose {
+
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 250px;
+  font-size: 150px;
+  background-color: lightblue;
 }
 
 .winner {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 250px;
+  font-size: 150px;
 }
 /* ---------------------------*/
 
@@ -269,11 +261,29 @@ input {
 
 
 .wrapper {
-  position: absolute;
-  left: 580px;
-  bottom: 300px;
+ 
+
 }
 
+.tryAgain {
+  margin: 0 auto;
 
+}
 
+img {
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+}
 
+.stats{
+  font-size: 50px;
+}
+
+.statsHeight {
+  margin-top: 20px;
+}
+
+iframe {
+  margin: 0 auto;
+}

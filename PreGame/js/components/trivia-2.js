@@ -2,6 +2,7 @@
 
 const triviaTwo = {
     template:`
+    
     <div class="movingBackground">
         <p class="questions">{{ $ctrl.trivia[1].question}}</p>
     
@@ -11,7 +12,15 @@ const triviaTwo = {
             <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[1].correct_answer)" value="false">
         </form>
         </div>
+        <nav
+        <ul >
+            <li class="tryAgain"><a href="#!/trivia">Quit</a></li>
+        </ul>
+    </nav>
     </div>
+
+   
+  
     `,
     controller:["Quiz", "$location", function(Quiz, $location){
         const vm=this;

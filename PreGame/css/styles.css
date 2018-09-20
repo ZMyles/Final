@@ -42,7 +42,7 @@ h1 {
   }
 }
 
-/* -------*/
+
 nav {
   margin-top: 50px;
 }
@@ -168,6 +168,11 @@ input {
 
 /*-----------------------------*/
 .buttonTrue {
+
+  
+  color: white;
+  border-style: none;
+
   font-size: 60px;
   font-family: 'Lobster', cursive;
   margin: 20px;
@@ -189,6 +194,11 @@ input {
 }
 
 .buttonFalse {
+
+  color: white;
+ 
+  border-style: none;
+
   font-size: 60px;
   font-family: 'Lobster', cursive;
   margin: 20px;
@@ -221,6 +231,9 @@ input {
     opacity: 0.9;
     animation: move 3.5s linear infinite;
 }
+
+
+
 
 
 .lose {

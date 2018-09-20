@@ -3,7 +3,9 @@
   perspective: 1000px;
   background: coral;
   border-radius: 5px;
-  margin: 0 auto;
+
+  /* margin: 0 auto; */
+
 }
 
 .flip-container:hover .flipper, .flip-container.hover .flipper {

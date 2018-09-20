@@ -9,9 +9,11 @@ const trivia = {
         </div>
     
         <div class="bodyBlock">
+
         <form>
             <input class="buttonTrue" type="button" ng-click="$ctrl.answer('true', $ctrl.trivia[0].correct_answer)" value="true">
             <input class="buttonFalse" type="button" ng-click="$ctrl.answer('false', $ctrl.trivia[0].correct_answer)" value="false">
+
         </form>
     </div>
 
@@ -25,6 +27,8 @@ const trivia = {
     //Injected Our "Quiz" services and "$location" to use their properties 
     controller:["Quiz", "$location" ,function(Quiz,$location){
         const vm=this;
+        vm.isOn = true;
+
         vm.questions=()=>{
             Quiz.triviaSearch().then((response)=>{
                 vm.trivia = response;
@@ -45,6 +49,16 @@ const trivia = {
             }
             Quiz.checkStats();
             $location.path("/trivia-two");
+
+
+        vm.toggle=() => {
+            if(vm.isOn) {
+                vm.isOn = false;
+            } else {
+                vm.isOn = true;
+            }
+            console.log(vm.isOn); 
+        }
         };     
     }]
 };

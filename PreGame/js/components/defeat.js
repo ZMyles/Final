@@ -10,7 +10,8 @@ const defeat = {
     <div class="wrapper">
     <nav
     <ul >
-    <p class="stats statsHeight">{{$ctrl.stats}}</p>
+    <p class="stats">Correct: {{$ctrl.stats.wins}}</p>
+    <p class="stats">Incorrect: {{$ctrl.stats.losses}}</p>
         <li class="tryAgain"><a href="#!/home">Try Again?</a></li>
     </ul>
 </nav>

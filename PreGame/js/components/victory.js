@@ -13,7 +13,8 @@ const victory = {
 
   <div class="move adjust">
 
-  <p class="stats">{{$ctrl.stats}}</p>
+  <p class="stats">Correct: {{$ctrl.stats.wins}}</p>
+  <p class="stats">Incorrect: {{$ctrl.stats.losses}}</p>
    <div class="flip-container" ontouchstart="this.classList.toggle('hover')">
                 <div class="flipper">
                     <div class="front">
